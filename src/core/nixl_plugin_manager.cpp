@@ -401,6 +401,11 @@ void nixlPluginManager::registerBuiltinPlugins() {
         registerStaticPlugin("UCX_MO", createStaticUcxMoPlugin);
 #endif // STATIC_PLUGIN_UCX_MO
 
+#ifdef STATIC_PLUGIN_UCX_GAUDI
+        extern nixlBackendPlugin* createStaticUcxGaudiPlugin();
+        registerStaticPlugin("UCX_GAUDI", createStaticUcxGaudiPlugin);
+#endif // STATIC_PLUGIN_UCX_GAUDI
+
 #ifdef STATIC_PLUGIN_GDS
 #ifndef DISABLE_GDS_BACKEND
         extern nixlBackendPlugin* createStaticGdsPlugin();

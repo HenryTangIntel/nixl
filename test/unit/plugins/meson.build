@@ -15,6 +15,7 @@
 
 subdir('ucx')
 subdir('ucx_mo')
+subdir('ucx_gaudi')
 subdir('posix')
 
 
